@@ -2,10 +2,10 @@
 ; Environnements de la l'API possibles
 ;   - demo
 ;       Environnement de démo. 
-;       Les signatures de cette environnement ne sont pas légales.
+;       Les signatures de cet environnement ne sont pas légales.
 ;   - prod
 ;       Environnement de production.
-;       Les signatures de cette environnement sont (bien sûr) légales.
+;       Les signatures de cet environnement sont (bien sûr) légales.
 ;
 environment = "demo"
 
@@ -15,7 +15,7 @@ login = "VOTRE_LOGIN"
 ; Votre mot de passe Yousign
 password = "VOTRE_MOT_DE_PASSE"
 
-; Indique si le mot de passe passé et crypté ou non (A décommenter si le mot de passe passé et crypté)
+; Indique si le mot de passe est chiffré ou non (A décommenter si le mot de passe est chiffré)
 ; isEncryptedPassword = true;
 
 ; clef d'api
