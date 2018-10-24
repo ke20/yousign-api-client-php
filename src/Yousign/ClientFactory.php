@@ -33,7 +33,7 @@ class ClientFactory
     {
         $client = new Client();
         foreach(Services::listing() as $service) {
-            $wsdl = sprintf('%s/%s/%s?wsdl', $this->environment->getHost(), $service, $service);
+            $wsdl = self::buildWsdlUrl($this->environment->getHost(), $service);
             $soapClient = new \SoapClient($wsdl, $options);
 
             $header = new \SoapHeader('http://www.yousign.com', 'Auth', (object)(array)$this->authentication);
@@ -43,5 +43,15 @@ class ClientFactory
         }
 
         return $client;
+    }
+
+    /**
+     * @param string $host
+     * @param string $service
+     * @return string
+     */
+    public static function buildWsdlUrl($host, $service)
+    {
+        return sprintf('%s/%s/%s?wsdl', $host, $service, $service);
     }
 }
